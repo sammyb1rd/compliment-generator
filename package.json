@@ -1,0 +1,25 @@
+{
+  "name": "compliment-generator",
+  "version": "1.0.0",
+  "description": "Simple 'Random' Compliment Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammyb1rd/compliment-generator.git"
+  },
+  "keywords": [
+    "compliment",
+    "generator",
+    "fun",
+    "simple"
+  ],
+  "author": "Sam Goldenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammyb1rd/compliment-generator/issues"
+  },
+  "homepage": "https://github.com/sammyb1rd/compliment-generator#readme"
+}
