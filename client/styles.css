@@ -1,4 +1,18 @@
 body {
     color: lightblue;
-    background-color: aliceblue;
+    background-color: aliceblues;
 }
+
+
+/*
+taken off package.json
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammyb1rd/compliment-generator.git"
+  },
+  "keywords": [
+    "compliment",
+    "generator",
+    "fun",
+    "simple"
+  ],*/

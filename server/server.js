@@ -5,7 +5,7 @@ const PORT = 3000;
 
 //bring in controller to use on server
 
-const controller = require('./dbofcomps.js');
+const controller = require('./controller.js');
 
 //parses JSON from incoming request
 app.use(express.json());
@@ -14,21 +14,31 @@ app.use(express.urlencoded({ extended: true}));
 
 //set up routes to serve html (eventually react)
 app.get('/', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, './client/index.html'))
+    res.status(200).sendFile(path.join(__dirname, '../client/index.html'))
+});
+//added to see if functionality continues to work?
+app.get('/index.html', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../client/index.html'))
 });
 
 app.get('/styles.css', (req, res) => {
-    return res.status(200).sendFile(path.join(__dirname, './client/styles.css'))
+    return res.status(200).sendFile(path.join(__dirname, '../client/styles.css'))
 });
 
 //set up post route for when button is clicked
-app.post('/', controller.getPhrase, (req, res) => {
+app.post('/', controller.getRandomPhrase, (req, res) => {
     return res.status(200).json(res.locals.phrase)
 })
 
+//redirect everyone back to index.html without changing browser
+// app.get('/*', (req, res) => {
+//     console.log('inside the app.get at wildcard')
+//     return res.status(200).redirect(path.join(__dirname, '../client/index.html'))
+// })
+
 //catchall bad requests
 app.use('*', (req, res) => {
-    return res.status(404).sendFile(path.join(__dirname, './client/404.html'))
+    return res.status(404).sendFile(path.join(__dirname, '../client/404.html'))
 });
 
 //Global Error Handler
