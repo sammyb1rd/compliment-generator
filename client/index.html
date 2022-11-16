@@ -6,8 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compliment Generator</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="index.js"></script>
 </head>
 <body>
-    <h1>Compliment and Pep Talk Generator</h1>    
+    <h1>Compliment and Pep Talk Generator</h1>
+    <div id="main">
+        <div id="displayBox" innerText="something not this">This is a generic pep talk pump up!</div>
+        <button id="completeRandom" class="randomButton" onclick="getCompleteRandom()">Get a New Compliment</button>
+    </div>
+
+
+<script>
+
+function tester() {
+    document.getElementById('displayBox').innerText = "a new compliment?!"
+}
+</script>
+    
+
 </body>
 </html>

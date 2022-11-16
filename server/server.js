@@ -25,6 +25,10 @@ app.get('/styles.css', (req, res) => {
     return res.status(200).sendFile(path.join(__dirname, '../client/styles.css'))
 });
 
+app.get('/index.js', (req, res) => {
+    return res.status(200).sendFile(path.join(__dirname, '../client/index.js'))
+});
+
 //set up post route for when button is clicked
 app.post('/', controller.getRandomPhrase, (req, res) => {
     return res.status(200).json(res.locals.phrase)

@@ -1,6 +1,12 @@
 body {
     color: lightblue;
     background-color: aliceblues;
+    padding: 10px;
+}
+
+#displayBox {
+    color: blue;
+    margin: 10px;
 }
 
 
