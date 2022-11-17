@@ -13,14 +13,21 @@
     <h3>Brand New Phrase</h3>
     <div id="main">
         <div id="displayBox">This is a generic pep talk pump up!</div>
-        <button id="completeRandom" class="randomButton" onclick="getCompleteRandom('full')">Get a New Compliment</button>
+        <button id="completeRandom" class="randomButton" onclick="getCompleteRandom('full')">Get a New Compliment</button><button id="saveComplete" class="randomButton" onclick="getCompleteRandom('saveCompletely new phrase')">Save This Compliment</button>
     </div>
     <h3>Section by Section Phrase</h3>
     <div id="mainSecond">
-        <div id="displayBoxSection1"><p id="1">1</p><p id="2">2</p><p id="3">3</p><p id="4">4</p></div>
-        <button  id="section1Random" class="randomButton" onclick="getCompleteRandom('one')">Get a Partial New Compliment</button>
+        <div id="displayBoxSection1"><p id="1">These</p><p>_</p><p id="2">are</p><p>_</p><p id="3">customizable</p><p>_</p><p id="4">sections!</p></div>
+        <button  id="section1Random" class="randomButton" onclick="getCompleteRandom('one')">Get a Partial New Compliment 1</button>
+        <button  id="section2Random" class="randomButton" onclick="getCompleteRandom('two')">Get a Partial New Compliment 2</button>
+        <button  id="section3Random" class="randomButton" onclick="getCompleteRandom('three')">Get a Partial New Compliment 3</button>
+        <button  id="section4Random" class="randomButton" onclick="getCompleteRandom('four')">Get a Partial New Compliment 4</button>
+        <button id="saveSection" class="randomButton" onclick="getCompleteRandom('saveSection new phrase')">Save This Compliment</button>
     </div>
-
+    <h3>Saved Phrases</h3>
+    <div id="main3">
+        <div id="displayBoxSaved">This is where your saved compliments will go!</div>
+    </div>
 <script>
 
 function tester() {

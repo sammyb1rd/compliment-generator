@@ -44,9 +44,24 @@ const controller = {
         const phrase = options.firstWord[oneWord]
         return phrase;
     },
+    makeTwoPhrase: function() {
+        const twoWord = Math.floor(Math.random() * options.secondWord.length)
+        const phrase = options.secondWord[twoWord]
+        return phrase;
+    },
+    makeThreePhrase: function() {
+        const threeWord = Math.floor(Math.random() * options.thirdWord.length)
+        const phrase = options.thirdWord[threeWord]
+        return phrase;
+    },
+    makeFourPhrase: function() {
+        const fourWord = Math.floor(Math.random() * options.lastWord.length)
+        const phrase = options.lastWord[fourWord]
+        return phrase;
+    },
     getRandomPhrase: (req, res, next) => {
 
-        const { howMuch } = req.body;
+        const { howMuch, savedPhrase, savedSections } = req.body;
         console.log(howMuch)
         // console.log(req.params)
         //pull anything from request?
@@ -71,6 +86,43 @@ const controller = {
             res.locals.phrase = {
                 phrase: new1Phrase,
                 amount: 'one'
+            }; 
+            return next();
+        } else if (howMuch === 'two') {
+            const new2Phrase = controller.makeTwoPhrase();
+            res.locals.phrase = {
+                phrase: new2Phrase,
+                amount: 'two'
+            }; 
+            return next();
+        } else if (howMuch === 'three') {
+            const new3Phrase = controller.makeThreePhrase();
+            res.locals.phrase = {
+                phrase: new3Phrase,
+                amount: 'three'
+            }; 
+            return next();
+        } else if (howMuch === 'four') {
+            const new4Phrase = controller.makeFourPhrase();
+            res.locals.phrase = {
+                phrase: new4Phrase,
+                amount: 'four'
+            }; 
+            return next();
+        } else if (howMuch === 'saveCompletely new phrase'){
+            console.log('how much to save', howMuch)
+            console.log('new phrase to save', savedPhrase)
+            res.locals.phrase = {
+                phrase: savedPhrase,
+                amount: 'new saved phrase',
+            }; 
+            return next();
+        } else if (howMuch === 'saveSection new phrase'){
+            console.log('how much to save', howMuch)
+            console.log('new phrase to save', savedSections)
+            res.locals.phrase = {
+                phrase: savedSections,
+                amount: 'new saved Section phrase',
             }; 
             return next();
         }

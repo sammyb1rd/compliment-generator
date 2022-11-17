@@ -16,7 +16,7 @@ body {
     /* align-items: center; */
 }
 
-#displayBox, #displayBoxSection1 {
+#displayBox, #displayBoxSection1, #displayBoxSaved {
     background-color: #456990;
     margin: 10px;
     padding: 5px;
@@ -32,7 +32,7 @@ button {
     padding: 5px;
     font-size: 16px;
     font-weight: 800;
-    color: #456990;
+    color: #E4FDE1;
     background-color: #F45B69;
     border: 1px solid #6B2737;
     border-radius: 5px;
@@ -42,13 +42,25 @@ button:hover {
     background-color: #6B2737;
 }
 
-/* #1, #2, #3, #4 {
-    display: inline;
-} */
+
 
 #displayBoxSection1 {
     display: flex;
 }
+
+#2 {
+    font-style: italic;
+    color: #a5da9f;
+}
+
+#section2Random, #section4Random {
+    color: #a5da9f;
+}
+
+#section1Random, #section3Random {
+    color: #E4FDE1;
+}
+
 
 
 
