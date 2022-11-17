@@ -7,14 +7,15 @@
 
     console.log('im loaded from server.js')
 
-    function getCompleteRandom(){
+    function getCompleteRandom(string){
+        console.log(string)
         console.log('i got clicked')
         fetch('/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify()
+            body: JSON.stringify({howMuch: string})
         })
         // .then(data => console.log(data))
         // .then(data => console.log(data.phrase))
@@ -25,8 +26,14 @@
         // .then(data => console.log(data))
         .then(data => {
             // console.log(displayBox)
-            document.getElementById('displayBox').innerText= data
+            if(data.amount === 'full') {
+            document.getElementById('displayBox').innerText= data.phrase
+            console.log('amount returned?', data.amount)
             // displayBox.innerText = data.phrase;
+            } else if (data.amount === 'one') {
+                document.getElementById('1').innerText= data.phrase
+            console.log('amount returned?', data.amount)
+            }
         })
         .catch(err => console.log(err))
     }
