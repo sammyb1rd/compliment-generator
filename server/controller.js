@@ -7,7 +7,7 @@
 //create bigass object to hold all the stuff
 
 const options = {
-    firstWord: ['Champ ', 'Fact: ', 'Everybody says ', 'Dang...', 'Check it: ',
+    firstWord: ['Champ, ', 'Fact: ', 'Everybody says ', 'Dang...', 'Check it: ',
                 'Just saying...', 'Superstar, ', 'Tiger, ', 'Self, ', 'Know this: ',
                 'News alert: ', 'Girl, ', 'Ace, ', 'Excuse me but ', 'Experts agree: ',
                 'In my opinion, ', 'Hear ye, hear ye:', 'Okay, listen up:'],

@@ -32,10 +32,10 @@ button {
     padding: 5px;
     font-size: 16px;
     font-weight: 800;
-    color: #114b5f;
+    color: #456990;
     background-color: #F45B69;
     border: 1px solid #6B2737;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 button:hover {
