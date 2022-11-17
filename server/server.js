@@ -11,6 +11,10 @@ const controller = require('./controller.js');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
+//could have defined const for different router
+//then app.use("new endpoint", newrouter)
+//then it would be newrouter.post(same endpoint, different middleware)
+//then corresponds to different fetch endpoint in frontend
 
 //set up routes to serve html (eventually react)
 app.get('/', (req, res) => {
