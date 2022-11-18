@@ -16,6 +16,10 @@ body {
     /* align-items: center; */
 }
 
+body:hover {
+    cursor: url(color1.cur.png), url(colorfulcursor.png) auto;
+}
+
 #displayBox, #displayBoxSection1, #displayBoxSaved {
     background-color: #456990;
     margin: 10px;
@@ -40,6 +44,7 @@ button {
 
 button:hover {
     background-color: #6B2737;
+    cursor: pointer;
 }
 
 
@@ -59,6 +64,21 @@ button:hover {
 
 #section1Random, #section3Random {
     color: #E4FDE1;
+}
+
+#displayBoxSaved {
+    min-height: 24px;
+}
+
+#saveSection, #saveComplete {
+    color: #6B2737;
+    background-color: #E4FDE1;
+}
+
+#saveSection:hover, #saveComplete:hover {
+    color: #E4FDE1;
+    background-color: #6B2737;
+    cursor: pointer;
 }
 
 
